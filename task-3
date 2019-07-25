@@ -1,0 +1,27 @@
+// you can write to stdout for debugging purposes, e.g.
+// console.log('this is a debug message');
+
+function solution(A, K) {
+    // write your code in JavaScript (Node.js 8.9.4)
+    
+    var result = [];
+    
+    for (i=0; i<A.length; i++) {
+        newIndex = getNewIndex(i, K, A.length);
+        result.splice(newIndex, 0, A[i]);
+    }
+
+    return result;
+}
+
+
+function getNewIndex(currentIndex, shift, arrLength) {
+    let lastIndex = arrLength-1
+    
+    if (currentIndex + shift > lastIndex) {
+        newIndex = (currentIndex + shift) % arrLength
+        return newIndex;
+    }
+    
+    return currentIndex + shift;
+}
