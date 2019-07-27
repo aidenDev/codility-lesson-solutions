@@ -9,10 +9,6 @@ function solution(A) {
     
     var firstPartSum = 0
     
-    if (A.length == 2) {
-        return Math.abs(A[0] - A[1]); 
-    }
-    
     for (i = 0; i < A.length-1; i++) {
         firstPartSum += A[i];
         
