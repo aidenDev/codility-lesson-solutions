@@ -13,14 +13,12 @@ function solution(A) {
         return Math.abs(A[0] - A[1]); 
     }
     
-    for (i = 0; i < A.length; i++) {
+    for (i = 0; i < A.length-1; i++) {
         firstPartSum += A[i];
         
         let secondPartSum = maxSecondPartSum - firstPartSum + A[0];
         let diff = Math.abs(firstPartSum - secondPartSum);
-        
-        //console.log("diff:" + diff);
-        //console.log("min diff" + minDiff);
+
         if (diff < minDiff) {
             minDiff = diff;
         }
