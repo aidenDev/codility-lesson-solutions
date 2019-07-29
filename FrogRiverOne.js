@@ -12,7 +12,6 @@ function solution(X, A) {  // O(N)
     return -1;
 }
 
-
 function constructLeavesRequiredSet(X) {
     let leavesRequired = new Set();
     
