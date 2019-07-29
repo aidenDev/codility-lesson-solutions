@@ -1,4 +1,4 @@
-function solution(X, A) {  // O(N)
+function solution(X, A) { // O(N)
     let leavesRequired = constructLeavesRequiredSet(X);
     
     for (i = 0; i < A.length; i++) { 
